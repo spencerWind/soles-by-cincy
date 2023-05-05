@@ -1,10 +1,12 @@
-import {} from "react";
 import "./App.css";
+import NavBar from "./components/Navigation/NavBar";
 
 function App() {
     return <div className="font-Rajdhani">
-      
-    </div>;
+      <header>
+        <NavBar />
+      </header>
+    </div>
 }
 
 export default App;

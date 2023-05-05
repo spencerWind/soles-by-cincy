@@ -13,6 +13,7 @@ export default {
             fontSize: {
                 title: `2.6rem;`,
                 paragraph: `1.2rem;`,
+                
             },
         },
     },
