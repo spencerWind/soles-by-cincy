@@ -30,7 +30,7 @@ const HamburgerMenu = () => {
     }, [menuIsActive]);
 
     return (
-        <section className="">
+        <section className="lg:hidden">
             <button
                 onClick={() => {
                     setMenuIsActive(true);
