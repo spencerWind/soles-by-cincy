@@ -13,7 +13,9 @@ export default {
             fontSize: {
                 title: `2.6rem;`,
                 paragraph: `1.2rem;`,
-                
+            },
+            dropShadow: {
+                nav: "filter: drop-shadow(0 4px 3px rgb(255 255 255 / 0.07)) drop-shadow(0 2px 2px rgb(255 255 255 / 0.06));",
             },
         },
     },

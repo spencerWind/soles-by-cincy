@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import MobileMenu from "../../assets/mobileMenu.svg";
+import MobileMenu from "../../assets/mobileMenuIcon.svg";
 import CloseMenu from "../../assets/closeMenu.svg";
 import FacebookIcon from "../../assets/facebookIcon.svg";
 import InstagramIcon from "../../assets/instagramIcon.svg";
@@ -30,8 +30,9 @@ const HamburgerMenu = () => {
     }, [menuIsActive]);
 
     return (
-        <section className="lg:hidden">
+        <section className="lg:hidden h-[32px]">
             <button
+                className="p-0 m-0"
                 onClick={() => {
                     setMenuIsActive(true);
                 }}>
