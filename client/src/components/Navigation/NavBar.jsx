@@ -33,8 +33,8 @@ const NavBar = () => {
         <nav
             className={
                 colorChange
-                    ? "flex rounded-2xl text-slate-300 justify-between items-center my-5 mx-5 lg:mx-20 py-2 px-4 lg:py-5 lg:px-10 bg-neutral-950"
-                    : "flex rounded-2xl text-slate-300 justify-between items-center my-5 mx-5 lg:mx-20 py-2 px-4 lg:py-5 lg:px-10"
+                    ? "flex rounded-2xl text-slate-300 justify-between items-center my-5 mx-5 lg:mx-20 py-2 px-5 lg:py-5 lg:px-10 bg-neutral-950"
+                    : "flex rounded-2xl text-slate-300 justify-between items-center my-5 mx-5 lg:mx-20 py-2 px-5 lg:py-5 lg:px-10"
             }>
             <Link to="/home">
                 <h1 className="text-2xl text-red-600 font-bold leading-none">
