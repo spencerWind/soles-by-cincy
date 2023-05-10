@@ -21,7 +21,7 @@ const Benefits = () => {
     ];
 
     return (
-        <div className="bg-neutral-950 flex flex-col lg:-translate-y-[130px] gap-28 py-20">
+        <div className="bg-neutral-950 flex flex-col lg:-translate-y-[150px] gap-28 py-20">
             <h3 className="self-center text-xl font-bold pb-2 lg:text-3xl border-b-4 rounded border-red-600 ">
                 Unlock your style potential
             </h3>

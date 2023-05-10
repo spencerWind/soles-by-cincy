@@ -10,8 +10,8 @@
     background-size: cover;
 }
 
-.abcd {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent);
+.hero-mask {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7), transparent);
 }
 
 .pricing-card {

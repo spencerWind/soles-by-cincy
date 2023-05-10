@@ -1,8 +1,8 @@
 const HeroSection = () => {
     return (
-        <section className="h-screen relative hero-section flex flex-col pt-20 overflow-hidden">
-            <div className="abcd absolute h-screen w-screen top-0 -z-5"></div>
-            <div className="flex flex-col py-10 px-10 z-10 lg:py-20 lg:my-20 lg:justify-center md:w-1/2 lg:w-1/3 lg:px-10 lg:mx-20">
+        <section className="h-screen relative hero-section flex flex-col overflow-hidden lg:pb-150px md:justify-center">
+            <div className="hero-mask absolute h-screen w-screen top-0 -z-5"></div>
+            <div className="z-10 px-10 max-md:mt-28 lg:px-10 lg:ml-10 lg:pl-20 max-w-lg lg:mb-[150px]">
                 <h1 className="font-black text-5xl mb-2 leading-none">
                     Unleash your unique style with our custom kicks
                 </h1>
