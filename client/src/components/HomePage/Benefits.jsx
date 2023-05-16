@@ -52,7 +52,7 @@ const Benefits = () => {
                                 {data.content}
                             </p>
                         </div>
-                        <div className=" w-1/2 h-[300px] lg:h-[500px] bg-slate-900 mb-10"></div>
+                        <div className=" w-1/2 h-[300px] lg:h-[500px] bg-slate-900"></div>
                     </div>
                 ); 
             })}

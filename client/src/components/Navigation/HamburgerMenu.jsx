@@ -62,11 +62,30 @@ const HamburgerMenu = () => {
                     <li>Shop</li>
                 </ul>
                 <ul className="h-[48px] w-full flex justify-around items-center">
-                    <li><img src={FacebookIcon} alt="Facebook Link" /></li>
-                    <li><img src={InstagramIcon} alt="Instagram Link" /></li>
-                    <li><img src={TwitterIcon} alt="Twitter Link" /></li>
-                    <li><img src={TikTokIcon} alt="TikTok Link" /></li>
-
+                    <li>
+                        <img
+                            src={FacebookIcon}
+                            alt="Facebook Link"
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src={InstagramIcon}
+                            alt="Instagram Link"
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src={TwitterIcon}
+                            alt="Twitter Link"
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src={TikTokIcon}
+                            alt="TikTok Link"
+                        />
+                    </li>
                 </ul>
             </motion.section>
         </section>

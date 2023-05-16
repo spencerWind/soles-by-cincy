@@ -1,6 +1,7 @@
 import Benefits from "./Benefits";
 import HeroSection from "./HeroSection";
 import PricingCards from "./PricingCards"
+import Testimonials from "./Testimonials";
 
 const Home = () => {
 
@@ -9,6 +10,7 @@ const Home = () => {
             <HeroSection />
             <Benefits />
             <PricingCards />
+            <Testimonials />
         </div>
     );
 };

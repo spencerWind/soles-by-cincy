@@ -1,4 +1,3 @@
-import checkmark from "../../assets/checkmark.svg";
 
 const PricingCards = () => {
     const pricingOptions = [
@@ -38,15 +37,27 @@ const PricingCards = () => {
     ];
 
     return (
-        <section className="bg-neutral-950 px-10">
+        <section className="bg-neutral-950 px-10 py-20 flex flex-col">
+            <h2 className="self-center mb-28 text-xl font-bold pb-2 lg:text-3xl border-b-4 rounded border-red-600">
+                Break the mold, not the budget
+            </h2>
             <div className="flex gap-20 items-center justify-center flex-wrap">
                 {pricingOptions.map((pricingOption, idx) => {
                     return (
                         <div
                             key={idx}
-                            className="w-[300px] border rounded-lg font-bold py-10 pricing-card text-slate-950">
+                            className={
+                                pricingOption.highlight
+                                    ? "w-[300px] border border-slate-800 rounded-lg font-bold py-10 bg-slate-900 text-slate-50 card-shadow"
+                                    : "w-[300px] border rounded-lg font-bold py-10 pricing-card text-slate-950 card-shadow"
+                            }>
                             <div className="border-b mx-5 flex flex-col items-start">
-                                <span className="font-semibold text-lg bg-slate-300 p-1 rounded leading-none mb-3">
+                                <span
+                                    className={
+                                        pricingOption.highlight
+                                            ? "font-semibold text-lg text-silver-600 p-1 rounded leading-none mb-3"
+                                            : "font-semibold text-lg p-1 rounded leading-none mb-3"
+                                    }>
                                     {pricingOption.tier}
                                 </span>
                                 <h3 className="text-4xl font-extrabold leading-none mb-1">
@@ -57,26 +68,14 @@ const PricingCards = () => {
                                 </p>
                             </div>
                             <ul className="flex flex-col px-5 py-5 gap-5 mb-10">
-                                <li className="flex flex-row gap-2 items-start font-normal">
-                                    <img
-                                        src={checkmark}
-                                        alt=""
-                                    />
-                                    <p>{pricingOption.details[0]}</p>
+                                <li className=" tems-start font-normal list-inside list-disc">
+                                    {pricingOption.details[0]}
                                 </li>
-                                <li className="flex flex-row gap-2 items-start font-normal">
-                                    <img
-                                        src={checkmark}
-                                        alt=""
-                                    />
-                                    <p>{pricingOption.details[1]}</p>
+                                <li className="items-start font-normal list-inside list-disc">
+                                    {pricingOption.details[1]}
                                 </li>
-                                <li className="flex flex-row gap-2 items-start font-normal">
-                                    <img
-                                        src={checkmark}
-                                        alt=""
-                                    />
-                                    <p>{pricingOption.details[2]}</p>
+                                <li className="items-start font-normal list-inside list-disc">
+                                    {pricingOption.details[2]}
                                 </li>
                             </ul>
                             <div className="px-5">
