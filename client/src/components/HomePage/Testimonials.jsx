@@ -4,14 +4,29 @@ import InstagramIcon from "../../assets/instagramIcon.svg";
 import FaceBookIcon from "../../assets/facebookIcon.svg";
 import TikTokIcon from "../../assets/tiktokIcon.svg";
 import TwitterIcon from "../../assets/TwitterIcon.svg";
-import { useRef } from "react";
+import { useEffect, useState } from "react";
+import { useAnimation, motion } from "framer-motion";
 
 const Testimonials = () => {
-    const slideBox = useRef()
-    
-    const leftArrowClick = () => {
-        console.log("hello")
-    }
+    const [clickDirection, setClickDirection] = useState("");
+    const [slideIndex, setSlideIndex] = useState(0);
+    const testimonialAnimation = useAnimation();
+
+    const handleButtonClick = (direction) => {
+        setClickDirection(direction);
+    };
+
+    useEffect(() => {
+
+        clickDirection === "left"
+            ? setSlideIndex((prevSlideIndex) => (prevSlideIndex + 400))
+            : setSlideIndex((prevSlideIndex) => (prevSlideIndex - 400));
+
+        testimonialAnimation.start({
+            translateX: slideIndex,
+        });
+
+    }, [clickDirection]);
 
     const testimonialData = [
         {
@@ -94,7 +109,9 @@ const Testimonials = () => {
                 </div>
                 <div className="lg:w-3/5">
                     <div className=" overflow-hidden h-[300px] border">
-                        <div ref={slideBox} className="flex gap-20 h-full">
+                        <motion.div
+                            animate={testimonialAnimation}
+                            className="flex gap-20 h-full">
                             {testimonialData.map((testimonial) => (
                                 <div
                                     key={testimonial.id}
@@ -109,18 +126,19 @@ const Testimonials = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="lg:h-[100px] lg:w-[400px] lg:flex lg:items-center text-5xl font-black gap-5">
-                        <button
-                            className=""
-                            onClick={leftArrowClick}>
+                        <button onClick={() => handleButtonClick("left")}>
                             <img
                                 src={LeftArrow}
                                 alt=""
                             />
                         </button>
-                        <button>
+                        <button
+                            onClick={() => {
+                                handleButtonClick("right");
+                            }}>
                             <img
                                 src={RightArrow}
                                 alt=""
